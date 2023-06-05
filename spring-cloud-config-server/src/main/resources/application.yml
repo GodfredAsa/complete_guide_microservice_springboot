@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+spring:
+  application:
+   name: spring-cloud-config-server
+
+  cloud:
+    config:
+      server:
+         git:
+#           uri: file:///Users/macintosh/IdeaProjects/microservice-practice/git-local-config-repo
+           uri: git@github.com:GodfredAsa/spring-cloud-config-server
+           username: GodfredAsa
+           password: Wisdom12345$
+           default-label: master
+         bootstrap: true
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          config: DEBUG
+#spring.cloud.config.server.git.default-label=main
